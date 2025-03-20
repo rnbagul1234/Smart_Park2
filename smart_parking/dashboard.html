@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Parking - Book a Spot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://www.google.com/maps">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="https://c7.alamy.com/comp/W9RDMT/vector-logo-of-car-and-bicycle-parking-area-W9RDMT.jpg" alt="Smart Parking Logo" class="small-logo">
+                <h1>Smart Parking</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">Book a Spot</a></li>
+                    <li><a href="#">My Bookings</a></li>
+                    <li><a href="#">Profile</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <img src="https://www.shareicon.net/data/512x512/2016/05/24/770137_man_512x512.png" alt="User Avatar" class="avatar">
+                <span class="username">Balkrushna Ahire</span>
+                <a href="index.html" class="logout-btn">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <section class="booking-section">
+            <h2>Book a Parking Spot</h2>
+            <div class="booking-form">
+                <div class="form-group">
+                    <label for="location">Select Location</label>
+                    <select id="location" required>
+                        <option value="">Select a parking location</option>
+                        <option value="downtown">Downtown Parking</option>
+                        <option value="mall">Shopping Mall</option>
+                        <option value="airport">Airport Parking</option>
+                        <option value="stadium">Stadium Parking</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="startTime">Start Time</label>
+                        <input type="time" id="startTime" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="endTime">End Time</label>
+                        <input type="time" id="endTime" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="vehicleType">Vehicle Type</label>
+                    <select id="vehicleType" required>
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="compact">Compact</option>
+                        <option value="bike">Bike</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="licensePlate">Vehicle No</label>
+                    <input type="text" id="licensePlate" placeholder="Enter your vehicle no" required>
+                </div>
+                <button type="button" id="findSpots" class="btn btn-primary">Find Available Spots</button>
+            </div>
+        </section>
+
+        <section class="parking-map-section">
+            <h2>Parking Locations</h2>
+            <div class="map-container">
+                <div id="parkingMap" class="parking-map">
+                    <!-- Map will be loaded here -->
+                    <div class="map-placeholder">
+                        <p>Interactive map loading...</p>
+                        <img src="https://lighthouseinspections.com/wp-content/uploads/2016/09/map-placeholder.jpg" alt="Map Placeholder">                    </div>
+                </div>
+            </div>
+            <div class="available-spots" id="availableSpots">
+                <h3>Available Parking Spots</h3>
+                <div class="spots-container">
+                    <div class="spot-card">
+                        <div class="spot-info">
+                            <h4>Spot A1</h4>
+                            <p>Downtown Parking - Level 2</p>
+                            <p class="spot-price">$5.00/hour</p>
+                        </div>
+                        <button class="btn btn-secondary book-btn" data-spot="A1">Book</button>
+                    </div>
+                    <div class="spot-card">
+                        <div class="spot-info">
+                            <h4>Spot B3</h4>
+                            <p>Downtown Parking - Level 1</p>
+                            <p class="spot-price">$4.50/hour</p>
+                        </div>
+                        <button class="btn btn-secondary book-btn" data-spot="B3">Book</button>
+                    </div>
+                    <div class="spot-card">
+                        <div class="spot-info">
+                            <h4>Spot C7</h4>
+                            <p>Downtown Parking - Level 3</p>
+                            <p class="spot-price">$6.00/hour</p>
+                        </div>
+                        <button class="btn btn-secondary book-btn" data-spot="C7">Book</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

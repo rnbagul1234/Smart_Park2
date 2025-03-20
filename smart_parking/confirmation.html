@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Parking - Booking Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="https://c7.alamy.com/comp/W9RDMT/vector-logo-of-car-and-bicycle-parking-area-W9RDMT.jpg" alt="Smart Parking Logo" class="small-logo">
+                <h1>Smart Parking</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="dashboard.html">Book a Spot</a></li>
+                    <li><a href="#">My Bookings</a></li>
+                    <li><a href="#">Profile</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <img src="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/3_avatar-512.png" alt="User Avatar" class="avatar">
+                <span class="username">Balkrushna Ahire</span>
+                <a href="index.html" class="logout-btn">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="confirmation-container">
+        <div class="confirmation-card">
+            <div class="confirmation-header">
+                <img src="https://cdn1.iconfinder.com/data/icons/basic-ui-elements-color-round/3/15-512.png" alt="Success Icon" class="success-icon">
+                <h2>Booking Confirmed!</h2>
+                <p>Your parking spot has been successfully booked.</p>
+            </div>
+            
+            <div class="booking-details">
+                <h3>Booking Details</h3>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">Booking ID:</span>
+                        <span class="detail-value" id="bookingId">SP12345678</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Location:</span>
+                        <span class="detail-value" id="locationName">Downtown Parking</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Spot Number:</span>
+                        <span class="detail-value" id="spotNumber">A1</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Date:</span>
+                        <span class="detail-value" id="bookingDate">March 18, 2025</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Time:</span>
+                        <span class="detail-value" id="bookingTime">2:00 PM - 4:00 PM</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Vehicle:</span>
+                        <span class="detail-value" id="vehicleInfo">Sedan (ABC-1234)</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Amount Paid:</span>
+                        <span class="detail-value" id="amountPaid">$10.00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="live-location-section">
+                <h3>Your Current Location</h3>
+                <div class="location-info" id="locationInfo">
+                    <p>Determining your location...</p>
+                </div>
+                <div id="liveMap" class="live-map">
+                    <!-- Live map will be loaded here -->
+                    <div class="map-placeholder">
+                        <img src="https://developers.google.com/static/maps/images/current-place-ios.png" alt="Live Map Placeholder">
+                    </div>
+                </div>
+                <div class="directions">
+                    <h4>Directions to Parking</h4>
+                    <p id="distance">Calculating distance...</p>
+                    <p id="eta">Estimating arrival time...</p>
+                    <button class="btn btn-secondary" id="getDirections">Get Directions</button>
+                </div>
+            </div>
+            
+            <div class="confirmation-actions">
+                <button class="btn btn-primary" id="viewBooking">View Booking</button>
+                <button class="btn btn-outline" id="downloadPass">Download Parking Pass</button>
+                <button class="btn btn-outline" id="addToCalendar">Add to Calendar</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
